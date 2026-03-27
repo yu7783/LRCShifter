@@ -1,32 +1,43 @@
 # LRCShifter
-Adjust timestamps in LRC lyric files with a simple Python GUI
+
+Fix out-of-sync LRC lyrics instantly with a simple GUI tool — no command line required.
+
+## Demo
+Before:
+[00:10.00]Hello
+[00:12.00]World
+
+After (+0.50s):
+[00:10.50]Hello
+[00:12.50]World
 
 ## Features
-With LRCShifter, you can easily adjust the timing of lyrics in LRC files.  
-You can move timestamps forward or backward by any number of seconds, including fractions of a second.
+- Shift all timestamps by any value (e.g. -0.10, +0.25)
+- Supports [mm:ss.mmm] format
+- Fully GUI-based (no CLI required)
+- Fast processing for large LRC files
 
-- Automatically adjusts timestamps in the `[mm:ss.mmm]` format.
-- Negative time values are not allowed.
-- Simple GUI that allows for easy operation without using the command line.
+## Use Cases
+- Fix delayed or early lyrics
+- Sync Vocaloid / karaoke lyrics
+- Adjust downloaded LRC files instantly
+
+## Why LRCShifter?
+- Designed for speed and simplicity
+- Handles large LRC files smoothly
 
 ## How to Use
 1. Install Python 3.x if you haven't already.
 2. Download `lrc.py`.
-3. Run lrc.py
-4. Enter the shift value in seconds (e.g., -0.10 or 0.25).
-5. Paste your LRC lyrics into the input box on the left.
-6. Click the Execute button to shift the timestamps.
-7. The adjusted lyrics will appear in the output box on the right.
+3. Run `lrc.py`
+4. Enter the shift value (e.g., -0.10 or 0.25)
+5. Paste LRC text
+6. Click Execute
 
 ## Technical Details
-- Written in Python 3 using Tkinter for the GUI.
-- Uses regular expressions to parse and adjust timestamps.
-- Input is accepted via a text box, and the output is displayed in a separate text box.
-- Developed with AI (Gemini) assistance and manually optimized logic.
-## Benefits
-- Quickly correct timing issues in LRC lyric files.
-- Improves synchronization with music playback.
-- Ideal for Vocaloid and karaoke enthusiasts.
+- Python 3 + Tkinter GUI
+- Regex-based timestamp parsing
+- AI-assisted development (Gemini) with manual optimization
 
 ## License
 MIT License
