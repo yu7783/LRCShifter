@@ -33,7 +33,7 @@ def process_shift():
     try:
         shift_seconds = float(shift_value)
     except ValueError:
-        messagebox.showerror("エラー", "秒数は数値で入力してね")
+        messagebox.showerror("error", "You can enter the duration as a numerical value.")
         return
 
     shift_ms = int(shift_seconds * 1000)
@@ -47,7 +47,7 @@ def process_shift():
 # ===== GUI構築 =====
 
 root = tk.Tk()
-root.title("LRCタイムシフトツール")
+root.title("LRCShifter")
 root.geometry("1000x600")
 
 main_frame = ttk.Frame(root, padding=10)
@@ -56,13 +56,13 @@ main_frame.pack(fill=tk.BOTH, expand=True)
 top_frame = ttk.Frame(main_frame)
 top_frame.pack(fill=tk.X)
 
-ttk.Label(top_frame, text="ずらす秒数（例: -0.10 や 0.25）:").pack(side=tk.LEFT)
+ttk.Label(top_frame, text="Offset in seconds (e.g., -0.10 or 0.25):").pack(side=tk.LEFT)
 
 shift_entry = ttk.Entry(top_frame, width=10)
 shift_entry.pack(side=tk.LEFT, padx=5)
 shift_entry.insert(0, "-0.10")
 
-shift_button = ttk.Button(top_frame, text="実行", command=process_shift)
+shift_button = ttk.Button(top_frame, text="Execute", command=process_shift)
 shift_button.pack(side=tk.LEFT, padx=10)
 
 text_frame = ttk.Frame(main_frame)
