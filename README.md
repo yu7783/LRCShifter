@@ -18,7 +18,7 @@ You can move timestamps forward or backward by any number of seconds, including 
 6.Click the 実行 button to shift the timestamps.
 7.The adjusted lyrics will appear in the output box on the right.
 
-##Technical Details
+## Technical Details
 Written in Python 3 using Tkinter for the GUI.
 Uses regular expressions to parse and adjust timestamps.
 Input is accepted via a text box, and the output is displayed in a separate text box.
@@ -28,5 +28,5 @@ Quickly correct timing issues in LRC lyric files.
 Improves synchronization with music playback.
 Ideal for Vocaloid and karaoke enthusiasts.
 
-##License
+## License
 MIT License
